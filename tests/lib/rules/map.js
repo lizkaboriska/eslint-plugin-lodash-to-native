@@ -27,7 +27,7 @@ ruleTester.run("map", rule, {
         {
             code: "_.map(collection, fn);",
             errors: [{ message: "Array#map() can be used instead of _.map()", }],
-            output: "(Array.isArray(collection) ?  collection.map(fn) : _.map(collection, fn);"
+            output: "Array.isArray(collection) ? collection.map(fn) : _.map(collection, fn);"
         }
     ]
 });
